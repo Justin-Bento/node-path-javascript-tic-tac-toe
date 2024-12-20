@@ -2,9 +2,9 @@
 const gameDisplay = document.querySelector(".gameboard");
 
 function ticTacToeBoard() {
-  let lineOne = "|" + " x " + "|" + "───" + "|" + "───" + "|" + "\n";
-  let lineTwo = "|" + "───" + "|" + " x " + "|" + "───" + "|" + "\n";
-  let lineThree = "|" + "───" + "|" + "───" + "|" + " x " + "|" + "\n";
-  return lineOne + lineTwo + lineThree;
+  let row1 = "|" + " " + "|" + " " + "|" + " " + "|";
+  let row2 = "|" + " " + "|" + " " + "|" + " " + "|";
+  let row3 = "|" + " " + "|" + " " + "|" + " " + "|";
+  return `${row1}\n${row2}\n${row3}`;
 }
 console.log(ticTacToeBoard());
