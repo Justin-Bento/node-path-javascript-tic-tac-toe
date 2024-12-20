@@ -70,3 +70,9 @@ body {
   border-style: solid;
   border-color: black;
 }
+.hide {
+  color: rgba(0, 0, 0, 0);
+}
+.showText {
+  color: rgba(0, 0, 0, 100);
+}

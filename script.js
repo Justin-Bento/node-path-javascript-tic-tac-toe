@@ -6,13 +6,14 @@ const ticTacToe = {
     this.gameboard.forEach((game, i) => {
       const paragraph = document.createElement("p");
       paragraph.textContent = game;
+      paragraph.setAttribute("class", "hide");
       paragraph.addEventListener("click", () => {
-        console.log(game++);
+        paragraph.textContent = "X";
+        paragraph.classList.add("showText");
       });
       gameDisplay.appendChild(paragraph);
     });
   },
-  player: function () {},
 };
 
 ticTacToe.displayBoard();
