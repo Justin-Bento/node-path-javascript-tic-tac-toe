@@ -7,7 +7,10 @@ function ticTacToeBoard() {
     const paragraph = document.createElement("p");
     paragraph.textContent = game;
     paragraph.addEventListener("click", () => {
-      console.log(game++);
+      function playerX() {
+        paragraph.textContent = "x";
+      }
+      playerX();
     });
     gameDisplay.appendChild(paragraph);
   });
