@@ -2,9 +2,9 @@
 const gameDisplay = document.querySelector(".gameboard");
 
 function ticTacToeBoard() {
-  let row1 = "|" + " " + "|" + " " + "|" + " " + "|";
-  let row2 = "|" + " " + "|" + " " + "|" + " " + "|";
-  let row3 = "|" + " " + "|" + " " + "|" + " " + "|";
-  return `${row1}\n${row2}\n${row3}`;
+  let gameboard = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  gameboard.forEach((box) => {
+    console.log(box);
+  });
 }
-console.log(ticTacToeBoard());
+ticTacToeBoard();
