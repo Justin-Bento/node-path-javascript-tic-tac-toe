@@ -2,6 +2,9 @@
 const gameDisplay = document.querySelector(".gameboard");
 
 function ticTacToeBoard() {
-  return "|───|───|───|\n|───|───|───|\n|───|───|───|";
+  let lineOne = "|───|───|───|\n";
+  let lineTwo = "|───|───|───|\n";
+  let lineThree = "|───|───|───|\n";
+  return lineOne + lineTwo + lineThree;
 }
 console.log(ticTacToeBoard());
