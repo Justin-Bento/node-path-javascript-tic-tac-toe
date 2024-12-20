@@ -6,6 +6,9 @@ function ticTacToeBoard() {
   gameboard.forEach((game, i) => {
     const paragraph = document.createElement("p");
     paragraph.textContent = game;
+    paragraph.addEventListener("click", () => {
+      console.log(game++);
+    });
     gameDisplay.appendChild(paragraph);
   });
 }
