@@ -11,5 +11,23 @@
 }
 
 body {
+  display: grid;
+  place-content: center;
+  min-height: 80dvh;
   font-family: "Sora", Arial, Helvetica, sans-serif;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.gameboard {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.gameboard * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid black;
+  margin: 0;
 }
