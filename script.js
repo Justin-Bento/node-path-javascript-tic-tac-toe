@@ -1,5 +1,6 @@
 const gameDisplay = document.querySelector(".gameboard");
 const gameboard = ["1", "1", "2", "3", "4", "5", "6", "7", "8"];
+const startGame = document.querySelector(".start-game");
 
 const ticTacToe = {
   setupBoard: function () {
@@ -11,7 +12,13 @@ const ticTacToe = {
       this.playerInput.O(container);
       gameDisplay.appendChild(container);
     });
+    startGame.addEventListener("click", this.chooseStartingPlayer);
   },
+  chooseStartingPlayer: function () {
+    currentPlayer = Math.random() > 0.5 ? "X" : "O";
+    console.log(`Player ${currentPlayer} starts the game!`);
+  },
+  setupGame: function () {},
   playerInput: {
     X: function (container) {
       container.addEventListener("click", () => {
