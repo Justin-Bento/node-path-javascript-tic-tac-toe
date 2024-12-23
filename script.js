@@ -2,7 +2,7 @@ const gameDisplay = document.querySelector(".gameboard");
 const gameboard = ["1", "1", "2", "3", "4", "5", "6", "7", "8"];
 
 const ticTacToe = {
-  displayBoard: function () {
+  setupBoard: function () {
     gameboard.forEach((game, i) => {
       const container = document.createElement("div");
       container.textContent = game;
@@ -32,4 +32,4 @@ const ticTacToe = {
   },
 };
 
-ticTacToe.displayBoard();
+ticTacToe.setupBoard();
