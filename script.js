@@ -19,6 +19,14 @@ const ticTacToe = {
         container.style.color = "black";
       });
     },
+    O: function (container) {
+      container.addEventListener("click", () => {
+        container.textContent = "O";
+        container.style.capitalize = "uppercase";
+        container.classList.remove("hide");
+        container.style.color = "black";
+      });
+    },
     // y: function (container) {},
   },
 };
