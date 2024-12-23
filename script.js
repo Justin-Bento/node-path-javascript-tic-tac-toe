@@ -16,7 +16,12 @@ const ticTacToe = {
   },
   chooseStartingPlayer: function () {
     currentPlayer = Math.random() > 0.5 ? "X" : "O";
-    console.log(`Player ${currentPlayer} starts the game!`);
+    let paragraph = document.querySelector(".game-logic p");
+    if (!paragraph) {
+      paragraph = document.createElement("p");
+      document.querySelector(".game-logic").appendChild(paragraph);
+    }
+    paragraph.textContent = `Player ${currentPlayer} starts the game!`;
   },
   setupGame: function () {},
   playerInput: {
