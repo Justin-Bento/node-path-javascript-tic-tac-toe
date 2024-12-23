@@ -8,6 +8,7 @@ const ticTacToe = {
       container.textContent = game;
       container.style.color = "transparent";
       this.playerInput.X(container);
+      this.playerInput.O(container);
       gameDisplay.appendChild(container);
     });
   },
