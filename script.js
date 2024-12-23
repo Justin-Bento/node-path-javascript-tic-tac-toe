@@ -1,9 +1,9 @@
 const gameDisplay = document.querySelector(".gameboard");
+const gameboard = ["1", "1", "2", "3", "4", "5", "6", "7", "8"];
 
 const ticTacToe = {
-  gameboard: ["1", "1", "2", "3", "4", "5", "6", "7", "8"],
   displayBoard: function () {
-    this.gameboard.forEach((game, i) => {
+    gameboard.forEach((game, i) => {
       const paragraph = document.createElement("p");
       paragraph.textContent = game;
       paragraph.setAttribute("class", "hide");
