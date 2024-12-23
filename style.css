@@ -70,3 +70,9 @@ body {
   border-style: solid;
   border-color: black;
 }
+.game-logic {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  justify-content: space-evenly;
+}
