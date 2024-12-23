@@ -6,15 +6,20 @@ const ticTacToe = {
     gameboard.forEach((game, i) => {
       const container = document.createElement("div");
       container.textContent = game;
-      container.setAttribute("class", "hide");
-      container.style.color = "rgba(0, 0, 0, 0)"; // Hide initially
-      container.addEventListener("click", () => {
-        container.textContent = "X";
-        container.classList.add("showText");
-        container.style.color = "rgba(0, 0, 0, 1)"; // Show text
-      });
+      container.style.color = "transparent";
+      this.playerInput.X(container);
       gameDisplay.appendChild(container);
     });
+  },
+  playerInput: {
+    X: function (container) {
+      container.addEventListener("click", () => {
+        container.textContent = "X";
+        container.classList.remove("hide");
+        container.style.color = "black";
+      });
+    },
+    // y: function (container) {},
   },
 };
 
