@@ -42,7 +42,10 @@ const ticTacToe = {
     },
   },
   computerInput: {
-    // ....
+    /* 
+     When the user presses the startGame button.
+      - The computer will ensure that the values don't overlap. (So if the computer selects X for the player the computer has to be O).
+    */
   },
 };
 
