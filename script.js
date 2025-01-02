@@ -3,6 +3,7 @@ const gameboard = ["1", "1", "2", "3", "4", "5", "6", "7", "8"];
 const startGame = document.querySelector(".start-game");
 
 const ticTacToe = {
+  setupGame: function () {},
   setupBoard: function () {
     gameboard.forEach((game, i) => {
       const container = document.createElement("div");
@@ -23,7 +24,6 @@ const ticTacToe = {
     }
     paragraph.textContent = `Player ${currentPlayer} starts the game!`;
   },
-  setupGame: function () {},
   playerInput: {
     X: function (container) {
       container.addEventListener("click", () => {
@@ -40,7 +40,9 @@ const ticTacToe = {
         container.style.color = "black";
       });
     },
-    // y: function (container) {},
+  },
+  computerInput: {
+    // ....
   },
 };
 
