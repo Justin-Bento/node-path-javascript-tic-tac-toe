@@ -1,6 +1,5 @@
 const gameDisplay = document.querySelector(".gameboard");
 const gameboard = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
-const startGame = document.querySelector(".start-game");
 
 const ticTacToe = {
   boxes: gameboard.map((x) => {
@@ -10,4 +9,16 @@ const ticTacToe = {
     gameDisplay.appendChild(box);
     return box;
   }),
+  startGame: function () {
+    const startGame = document.querySelector(".start-game");
+    startGame.addEventListener("click", () => {
+      const gameNotice = document.createElement("p");
+      const appendGameNotice = document.querySelector(".game-logic");
+      appendGameNotice.appendChild(gameNotice);
+      let gameNoticeText = (gameNotice.textContent = "Start Game");
+      return gameNoticeText;
+    });
+  },
 };
+
+ticTacToe.startGame();
