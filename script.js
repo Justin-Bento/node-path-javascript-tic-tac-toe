@@ -4,9 +4,10 @@ const startGame = document.querySelector(".start-game");
 
 const ticTacToe = {
   boxes: gameboard.map((x) => {
+    // This section Append each div to gameDisplay and returns the game board box element.
     const box = document.createElement("div");
     box.textContent = x;
-    gameDisplay.appendChild(box); // Append each box to gameDisplay
-    return box; // Return the box element for future reference
+    gameDisplay.appendChild(box);
+    return box;
   }),
 };
