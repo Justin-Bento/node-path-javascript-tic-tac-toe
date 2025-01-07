@@ -5,6 +5,7 @@ const ticTacToeGame = {
   cells: initialBoardState.map((cellValue) => {
     // Create a div for each cell, append it to the gameboard, and return the created cell element.
     const cellElement = document.createElement("div");
+    cellElement.dataset.value = cellValue;
     cellElement.textContent = cellValue;
     gameBoardElement.appendChild(cellElement);
     return cellElement;
@@ -18,8 +19,6 @@ const ticTacToeGame = {
       gameMessage.textContent = "Start Game";
     });
   },
-
-  // Add any additional methods or properties related to player indicators here.
 };
 
 ticTacToeGame.initializeGame();
