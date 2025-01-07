@@ -19,6 +19,8 @@ const ticTacToeGame = {
       gameMessage.textContent = "Start Game";
     });
   },
+  isHumanTurn: true,
+  isComputerTurn: true,
 };
 
 ticTacToeGame.initializeGame();
