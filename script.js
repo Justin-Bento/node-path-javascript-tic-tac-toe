@@ -21,6 +21,8 @@ const ticTacToeGame = {
   },
   isHumanTurn: true,
   isComputerTurn: true,
+  player: function () {},
+  computer: function () {},
 };
 
 ticTacToeGame.initializeGame();
