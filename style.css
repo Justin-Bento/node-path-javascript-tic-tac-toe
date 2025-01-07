@@ -72,6 +72,7 @@ body {
 }
 .game-logic {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   margin-top: 2rem;
   justify-content: space-evenly;
