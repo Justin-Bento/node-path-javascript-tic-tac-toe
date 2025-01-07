@@ -1,24 +1,25 @@
-const gameDisplay = document.querySelector(".gameboard");
-const gameboard = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
+const gameBoardElement = document.querySelector(".gameboard");
+const initialBoardState = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
 
-const ticTacToe = {
-  boxes: gameboard.map((x) => {
-    // This section Append each div to gameDisplay and returns the game board box element.
-    const box = document.createElement("div");
-    box.textContent = x;
-    gameDisplay.appendChild(box);
-    return box;
+const ticTacToeGame = {
+  cells: initialBoardState.map((cellValue) => {
+    // Create a div for each cell, append it to the gameboard, and return the created cell element.
+    const cellElement = document.createElement("div");
+    cellElement.textContent = cellValue;
+    gameBoardElement.appendChild(cellElement);
+    return cellElement;
   }),
-  startGame: function () {
-    const startGame = document.querySelector(".start-game");
-    startGame.addEventListener("click", () => {
-      const gameNotice = document.createElement("p");
-      const appendGameNotice = document.querySelector(".game-logic");
-      appendGameNotice.appendChild(gameNotice);
-      let gameNoticeText = (gameNotice.textContent = "Start Game");
-      return gameNoticeText;
+  initializeGame: function () {
+    const startButton = document.querySelector(".start-game");
+    startButton.addEventListener("click", () => {
+      const gameMessage = document.createElement("p");
+      const gameLogicContainer = document.querySelector(".game-logic");
+      gameLogicContainer.appendChild(gameMessage);
+      gameMessage.textContent = "Start Game";
     });
   },
+
+  // Add any additional methods or properties related to player indicators here.
 };
 
-ticTacToe.startGame();
+ticTacToeGame.initializeGame();
