@@ -9,6 +9,7 @@ const ticTacToeGame = {
     const cellElement = document.createElement("div");
     cellElement.dataset.value = cellValue;
     cellElement.textContent = cellValue;
+    cellElement.style.color = "rgba(0,0,0,0)";
     gameBoardElement.appendChild(cellElement);
     return cellElement;
   }),
