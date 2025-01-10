@@ -2,6 +2,8 @@ const gameBoardElement = document.querySelector(".gameboard");
 const initialBoardState = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
 
 const ticTacToeGame = {
+  isHumanTurn: true,
+  isComputerTurn: false,
   cells: initialBoardState.map((cellValue) => {
     // Create a div for each cell, append it to the gameboard, and return the created cell element.
     const cellElement = document.createElement("div");
@@ -19,8 +21,7 @@ const ticTacToeGame = {
       gameMessage.textContent = "Start Game";
     });
   },
-  isHumanTurn: true,
-  isComputerTurn: true,
+
   player: function () {},
   computer: function () {},
 };
