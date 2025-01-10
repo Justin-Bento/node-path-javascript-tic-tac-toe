@@ -22,7 +22,12 @@ const ticTacToeGame = {
     });
   },
 
-  player: function () {},
+  player: function (cell) {
+    cell.textContent = "X";
+    cell.dataset.value = "X";
+    this.isHumanTurn = false;
+    this.isComputerTurn = true;
+  },
   computer: function () {},
 };
 
