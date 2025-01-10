@@ -32,7 +32,22 @@ const ticTacToeGame = {
       setTimeout(() => this.computer(), 500); // Delay computer move for better UX
     }
   },
-  computer: function () {},
+  computer: function () {
+    const availableCells = this.cells.filter(
+      (cell) => cell.textContent !== "X" && cell.textContent !== "O"
+    );
+    if (availableCells.length > 0) {
+      // Make random move
+      const randomCell =
+        availableCells[Math.floor(Math.random() * availableCells.length)];
+      randomCell.textContent = "O";
+      randomCell.dataset.value = "O";
+      this.isComputerTurn = false;
+      this.isHumanTurn = true;
+
+      this.checkWin("O");
+    }
+  },
 };
 
 ticTacToeGame.initializeGame();
