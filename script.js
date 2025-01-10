@@ -27,6 +27,10 @@ const ticTacToeGame = {
     cell.dataset.value = "X";
     this.isHumanTurn = false;
     this.isComputerTurn = true;
+    // Check for win or draw before computer moves
+    if (!this.checkWin("X")) {
+      setTimeout(() => this.computer(), 500); // Delay computer move for better UX
+    }
   },
   computer: function () {},
 };
