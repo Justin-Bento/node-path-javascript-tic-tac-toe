@@ -112,6 +112,19 @@ const ticTacToeGame = {
     }
     return false;
   },
+  checkDraw: function () {
+    const gameMessage = document.querySelector(".game-logic p");
+    if (
+      this.cells.every(
+        (cell) => cell.textContent === "X" || cell.textContent === "O"
+      )
+    ) {
+      this.gameActive = false;
+      gameMessage.textContent = "It's a draw!";
+      return true;
+    }
+    return false;
+  },
 };
 
 ticTacToeGame.initializeGame();
