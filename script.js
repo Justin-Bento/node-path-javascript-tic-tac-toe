@@ -97,6 +97,21 @@ const ticTacToeGame = {
       }
     }
   },
+  checkWin: function (player) {
+    const gameMessage = document.querySelector(".game-logic p");
+
+    for (let combination of this.winningCombinations) {
+      if (
+        combination.every((index) => this.cells[index].dataset.value === player)
+      ) {
+        this.gameActive = false;
+        gameMessage.textContent =
+          player === "X" ? "You win!" : "Computer wins!";
+        return true;
+      }
+    }
+    return false;
+  },
 };
 
 ticTacToeGame.initializeGame();
