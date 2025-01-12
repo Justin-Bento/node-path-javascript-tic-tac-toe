@@ -80,16 +80,21 @@ const ticTacToeGame = {
     const availableCells = this.cells.filter(
       (cell) => cell.textContent !== "X" && cell.textContent !== "O"
     );
+
     if (availableCells.length > 0) {
-      // Make random move
       const randomCell =
         availableCells[Math.floor(Math.random() * availableCells.length)];
+      randomCell.style.color = "#000";
       randomCell.textContent = "O";
       randomCell.dataset.value = "O";
       this.isComputerTurn = false;
       this.isHumanTurn = true;
 
       this.checkWin("O");
+      if (!this.checkDraw()) {
+        const gameMessage = document.querySelector(".game-logic p");
+        gameMessage.textContent = "Your turn!";
+      }
     }
   },
 };
