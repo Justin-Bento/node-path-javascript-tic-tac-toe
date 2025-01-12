@@ -33,6 +33,23 @@ const ticTacToeGame = {
     [0, 4, 8],
     [2, 4, 6], // Diagonals
   ],
+  initializeGame: function () {
+    const startButton = document.querySelector(".start-game");
+    const gameLogicContainer = document.querySelector(".game-logic");
+    const gameMessage = document.createElement("p");
+    gameLogicContainer.appendChild(gameMessage);
+
+    // Add click handlers to all cells
+    this.cells.forEach((cell) => {
+      cell.addEventListener("click", () => this.handleCellClick(cell));
+    });
+
+    startButton.addEventListener("click", () => {
+      this.resetGame();
+      gameMessage.textContent = "Game Started - Your Turn!";
+      this.gameActive = true;
+    });
+  },
   player: function (cell) {
     cell.textContent = "X";
     cell.dataset.value = "X";
