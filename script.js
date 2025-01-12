@@ -63,15 +63,19 @@ const ticTacToeGame = {
   },
 
   player: function (cell) {
+    cell.style.color = "#000";
     cell.textContent = "X";
     cell.dataset.value = "X";
     this.isHumanTurn = false;
     this.isComputerTurn = true;
-    // Check for win or draw before computer moves
+
     if (!this.checkWin("X")) {
-      setTimeout(() => this.computer(), 500); // Delay computer move for better UX
+      if (!this.checkDraw()) {
+        setTimeout(() => this.computer(), 500);
+      }
     }
   },
+
   computer: function () {
     const availableCells = this.cells.filter(
       (cell) => cell.textContent !== "X" && cell.textContent !== "O"
