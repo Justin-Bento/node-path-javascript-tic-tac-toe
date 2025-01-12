@@ -125,6 +125,17 @@ const ticTacToeGame = {
     }
     return false;
   },
+  resetGame: function () {
+    this.cells.forEach((cell) => {
+      const index = this.cells.indexOf(cell);
+      cell.textContent = index.toString();
+      cell.dataset.value = index.toString();
+      cell.style.color = "rgba(0,0,0,0)";
+    });
+    this.isHumanTurn = true;
+    this.isComputerTurn = false;
+    this.gameActive = true;
+  },
 };
 
 ticTacToeGame.initializeGame();
