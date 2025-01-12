@@ -50,6 +50,18 @@ const ticTacToeGame = {
       this.gameActive = true;
     });
   },
+  handleCellClick: function (cell) {
+    if (
+      !this.gameActive ||
+      !this.isHumanTurn ||
+      cell.textContent === "X" ||
+      cell.textContent === "O"
+    ) {
+      return;
+    }
+    this.player(cell);
+  },
+
   player: function (cell) {
     cell.textContent = "X";
     cell.dataset.value = "X";
