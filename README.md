@@ -13,3 +13,7 @@ The goal of this repository is to make a Tic Tac Toe game you can play in your b
 - JavaScript
 - Vercel
 - GitHub
+
+## Acknowledgements
+
+This endeavour would not have been possible without the support from the contributors at The Odin Project. Their tutorials and the collaborative community played a key role in helping me develop my skills as a Website Developer.
